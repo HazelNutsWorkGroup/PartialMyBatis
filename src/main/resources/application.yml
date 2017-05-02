@@ -1,0 +1,37 @@
+#
+## 全局配置设置,会覆盖application.properties文件中相同属性
+#
+
+#RESTfulConfiguration
+RESTful:
+  api:
+    baseUrl: asdfadsf
+    version: asdfsadfasd
+
+#JDBC Pool Connection
+pooled:
+  c3p0:
+    jdbcUrl: jdbc:mysql://192.168.62.3:3306/java_database?useUnicode=true&amp;characterEncoding=UTF-8
+    user: Ann
+    password: Ann1985
+    driverClass: com.mysql.jdbc.Driver
+    minPoolSize: 2
+    maxPoolSize: 10
+    maxIdleTime: 3600
+    acquireIncrement: 3
+    maxStatements: 1000
+    initialPoolSize: 3
+    idleConnectionTestPeriod: 1200
+    acquireRetryAttempts: 30
+    acquireRetryDelay: 1200
+    breakAfterAcquireFailure: true
+    testConnectionOnCheckin: false
+    testConnectionOnCheckout: false
+
+mybatis:
+  typeAliasesPackage: com.taiji.domain.manage
+  mapperLocations: com/taiji/dao/manage/*.xml
+
+logging:
+  path: ./log
+  #config: classpath:log4j2-spring.xml
